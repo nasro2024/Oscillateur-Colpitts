@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculateur d'oscillateur Colpitts.</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Calculateur d'oscillateur Colpitts.                       
+   Benahmed Nasreddine, Univ. Tlemcen, ALGERIE. </h1>
+  <p>Bienvenue sur mon calculateur d'oscillateur Colpitts. Utilisez cet outil pour determiner les valeurs des composants necessaires pour construire un oscillateur Colpitts en fonction de vos specifications.</p>
+  <div class="input-group">
+    <label for="frequency">FREQUENCE (kHz) :</label>
+    <input type="number" id="frequency" step="0.01" min="0">
+  </div>
+  <div class="input-group">
+    <label for="vcc">TENSION D'ALIMENTATION Vcc (Volt) :</label>
+    <input type="number" id="vcc" step="0.1" min="0">
+  </div>
+  <div class="input-group">
+    <label for="beta">GAIN EN COURANT (Beta) DU TRANSISTOR :</label>
+    <input type="number" id="beta" step="0.1" min="0">
+  </div>
+  <div class="input-group">
+    <label for="icq">COURANT DE POLARISATION DU TRANSISTOR (mA) :</label>
+    <input type="number" id="icq" step="0.01" min="0">
+  </div>
+  <div class="input-group">
+    <label for="inductance">INDUCTANCE (micro-H) :</label>
+    <input type="number" id="inductance" step="0.01" min="0">
+  </div>
+  <button onclick="calculateColpitts()">CALCULER</button>
+  <button onclick="resetInputs()">REINITIALISER</button>
+  <div id="colpittsResults"></div>
+</div>
+
+<img src="colpitts_circuit.png" alt="Circuit Colpitts" class="circuit-img">
+
+<script src="script.js"></script>
+</body>
+</html>
